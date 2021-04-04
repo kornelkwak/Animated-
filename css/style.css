@@ -1,0 +1,209 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.sky {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  position: top;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, royalblue), to(azure));
+  background-image: linear-gradient(royalblue 60%, azure);
+}
+
+.ground {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #015501), to(green));
+  background-image: linear-gradient(#015501 30%, green);
+}
+
+.egg1 {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  -webkit-transform: translate(-80%, -80%);
+          transform: translate(-80%, -80%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 270px;
+  width: 200px;
+  background-color: tomato;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  z-index: 2;
+  -webkit-animation: egg1 2s infinite;
+          animation: egg1 2s infinite;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, transparent 40%, #4b4a4a);
+}
+
+.egg1 .stripe {
+  width: 100%;
+  height: 45px;
+  background-color: aqua;
+  background-image: linear-gradient(120deg, transparent 40%, #444444);
+}
+
+.egg2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: -30%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 250px;
+  width: 180px;
+  background-color: yellow;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  z-index: 1;
+  -webkit-transform: rotate(330deg);
+          transform: rotate(330deg);
+  -webkit-animation: egg2 2s infinite;
+          animation: egg2 2s infinite;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, transparent 20%, #4b4a4a);
+}
+
+.egg2 .stripe {
+  width: 100%;
+  height: 60px;
+  background-color: #8400ff;
+  background-image: linear-gradient(120deg, transparent 20%, #4b4a4a);
+}
+
+.egg2 .stripe--dots {
+  background-image: radial-gradient(orange 19px, transparent 0px);
+  background-size: 40px 40px;
+  background-position: 10px 10px;
+}
+
+.egg2 .stripe--stripes {
+  background-image: linear-gradient(90deg, orange 10px, transparent 0px);
+  background-size: 20px 20px;
+}
+
+.wishes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+  font-family: 'Courgette', cursive;
+  font-size: 70px;
+  color: gold;
+  text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+  -webkit-animation: wishes 3s ease-in;
+          animation: wishes 3s ease-in;
+}
+
+@-webkit-keyframes egg1 {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  50% {
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+  }
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@keyframes egg1 {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  50% {
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+  }
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@-webkit-keyframes egg2 {
+  0% {
+    -webkit-transform: rotate(310deg);
+            transform: rotate(310deg);
+  }
+  50% {
+    -webkit-transform: rotate(350deg);
+            transform: rotate(350deg);
+  }
+  100% {
+    -webkit-transform: rotate(310deg);
+            transform: rotate(310deg);
+  }
+}
+
+@keyframes egg2 {
+  0% {
+    -webkit-transform: rotate(310deg);
+            transform: rotate(310deg);
+  }
+  50% {
+    -webkit-transform: rotate(350deg);
+            transform: rotate(350deg);
+  }
+  100% {
+    -webkit-transform: rotate(310deg);
+            transform: rotate(310deg);
+  }
+}
+
+@-webkit-keyframes wishes {
+  0% {
+    font-size: 30px;
+    top: -100%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    font-size: 70px;
+  }
+}
+
+@keyframes wishes {
+  0% {
+    font-size: 30px;
+    top: -100%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    font-size: 70px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
