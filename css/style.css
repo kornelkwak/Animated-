@@ -28,10 +28,6 @@ body {
 
 .egg1 {
   position: absolute;
-  top: -30%;
-  left: 50%;
-  -webkit-transform: translate(-80%, -80%);
-          transform: translate(-80%, -80%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,27 +37,32 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, transparent 40%, #4b4a4a);
+  top: -30%;
+  left: 50%;
+  -webkit-transform: translate(-80%, -80%);
+          transform: translate(-80%, -80%);
   height: 270px;
   width: 200px;
   background-color: tomato;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
   z-index: 2;
   -webkit-animation: egg1 2s infinite;
           animation: egg1 2s infinite;
-  overflow: hidden;
-  background-image: linear-gradient(120deg, transparent 40%, #4b4a4a);
 }
 
 .egg1 .stripe {
   width: 100%;
   height: 45px;
   background-color: aqua;
-  background-image: linear-gradient(120deg, transparent 40%, #444444);
+  background-image: linear-gradient(120deg, transparent 40%, #4b4a4a);
 }
 
 .egg2 {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,7 +72,9 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  position: absolute;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, transparent 40%, #4b4a4a);
   top: -30%;
   left: 30%;
   -webkit-transform: translate(-50%, -50%);
@@ -79,32 +82,29 @@ body {
   height: 250px;
   width: 180px;
   background-color: yellow;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  z-index: 1;
   -webkit-transform: rotate(330deg);
           transform: rotate(330deg);
+  z-index: 1;
   -webkit-animation: egg2 2s infinite;
           animation: egg2 2s infinite;
-  overflow: hidden;
-  background-image: linear-gradient(120deg, transparent 20%, #4b4a4a);
 }
 
 .egg2 .stripe {
   width: 100%;
   height: 60px;
   background-color: #8400ff;
-  background-image: linear-gradient(120deg, transparent 20%, #4b4a4a);
+  background-image: linear-gradient(120deg, transparent 40%, #4b4a4a);
 }
 
 .egg2 .stripe--dots {
-  background-image: radial-gradient(orange 19px, transparent 0px);
   background-size: 40px 40px;
+  background-image: radial-gradient(orange 19px, transparent 0px);
   background-position: 10px 10px;
 }
 
 .egg2 .stripe--stripes {
-  background-image: linear-gradient(90deg, orange 10px, transparent 0px);
   background-size: 20px 20px;
+  background-image: linear-gradient(90deg, orange 10px, transparent 0px);
 }
 
 .wishes {
@@ -119,6 +119,34 @@ body {
   text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
   -webkit-animation: wishes 3s ease-in;
           animation: wishes 3s ease-in;
+}
+
+.shadow1 {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  background-color: #023f02;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  -webkit-animation: shadow 2s infinite;
+          animation: shadow 2s infinite;
+  -webkit-transform: rotate(350deg);
+          transform: rotate(350deg);
+  top: 50%;
+  left: 50%;
+}
+
+.shadow2 {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  background-color: #023f02;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  -webkit-animation: shadow 2s infinite;
+          animation: shadow 2s infinite;
+  -webkit-transform: rotate(350deg);
+          transform: rotate(350deg);
+  top: 40%;
+  left: 35%;
 }
 
 @-webkit-keyframes egg1 {
@@ -204,6 +232,30 @@ body {
   }
   100% {
     font-size: 70px;
+  }
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    width: 150px;
+  }
+  50% {
+    width: 300px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    width: 150px;
+  }
+  50% {
+    width: 300px;
+  }
+  100% {
+    width: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */
